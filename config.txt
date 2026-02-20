@@ -1,0 +1,2 @@
+net.app.dao.DaoImpl
+net.app.metier.MetierImpl
