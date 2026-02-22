@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id = "d" class = "net.app.dao.DaoImpl" ></bean>
-    <bean id="meteir" class="net.app.metier.MetierImpl">
+    <bean id="metier" class="net.app.metier.MetierImpl">
         <property name="dao" ref="d"></property>
     </bean>
 

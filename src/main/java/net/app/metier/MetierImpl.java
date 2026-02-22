@@ -1,7 +1,11 @@
 package net.app.metier;
 
 import net.app.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements IMetier {
     private IDao dao;
     @Override
@@ -11,12 +15,12 @@ public class MetierImpl implements IMetier {
         return res;
     }
 
-    public MetierImpl(IDao dao) {
+    public MetierImpl(@Qualifier("d2") IDao dao) {
         this.dao = dao;
     }
 
-    public MetierImpl() {
-    }
+//    public MetierImpl() {
+//    }
 
     public void setDao(IDao dao) {
         this.dao = dao;
